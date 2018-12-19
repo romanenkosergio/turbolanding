@@ -13,6 +13,13 @@ a
 	text-decoration: none
 	&:hover
 		text-decoration: none
+.title
+	@extend %title
+.subtitle
+	@extend %subtitle
+.text
+	@extend %text
+// Первый Экран
 .first-screen
 	height: 100%
 	min-height: 100vh
@@ -153,6 +160,30 @@ a
 			color: #2f8ddb
 			line-height: normal
 			margin-top: 15px
+// Второй Экрна
+.stages
+	margin-top: 64px
+	background: url("../img/stages/stages-bg.svg") center no-repeat
+	width: 100%
+	min-height: 1220px
+	height: 100%
+	&__title
+		margin-top: 50px
+		letter-spacing: 5px
+		letter-spacing: 0.08em
+	&__advantages
+		margin-top: 80px
+		display: flex
+		justify-content: space-around
+	&__video
+		height: 418px
+		background: $accent
+		box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.16)
+	&__text
+		margin-top: 28px
+
+
+
 
 
 
