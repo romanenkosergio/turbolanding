@@ -153,7 +153,7 @@ a
 			font-size: 26px
 			font-family: $hel-regular
 			margin-top: 30px
-			transition: 0.3s
+			@extend %transition
 			&:hover
 				@extend %hover
 				color: $accent
@@ -166,10 +166,11 @@ a
 // Второй Экрна
 .stages
 	margin-top: 64px
-	background: url("../img/stages/stages-bg.svg") center no-repeat
 	width: 100%
 	min-height: 1220px
 	height: 100%
+	position: relative
+	background: url("../img/stages/stages-bg.svg") no-repeat center/cover
 	&__title
 		margin-top: 50px
 		letter-spacing: 5px
@@ -182,15 +183,16 @@ a
 		height: 418px
 		background: $accent
 		box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.16)
+		z-index: 9999
 	&__text
 		margin-top: 28px
 	&__timeline
-		margin-top: 90px
 		position: relative
-		height: 101px
 		margin-bottom: 40px
-		z-index: 3
 		width: 100%
+		height: 100%
+		min-height: 250px
+		padding: 20px 0
 		&::after
 			content: ""
 			display: block !important
@@ -201,50 +203,64 @@ a
 			right: 0
 			top: 50%
 			transform: translateY(-50%)
-			z-index: 1
 			background: #2F07FF
+			z-index: 0
 		&_step
 			text-align: center
+			margin-left: 15px
+			margin-right: 15px
+			@extend %transition
+			&::before
+				content: ""
+				display: block !important
+				position: absolute
+				height: 17px
+				width: 17px
+				border-radius: 50%
+				border: 3px solid #2F07FF
+				top: 50%
+				left: 45%
+				transform: translateY(-50%)
+				background: $accent
+				z-index: 1
+				transition: all .4s
+			&:hover
+				&::before
+					width: 35px
+					height: 35px
+					background: $accent url("../img/stages/check.svg") center no-repeat
+					background-size: 1.2em
+				h5
+					padding-top: 30px
+				.stages__timeline_text
+					padding-top: 70px
+
 		&_link
-			height: 101px
+			margin: 0 auto
+			z-index: 4
+
 			h5
 				text-transform: uppercase
 				color: $text
 				font-size: 18px
 				font-family: $rob-bold
-				padding-bottom: 40px
-				height: 20px
 				letter-spacing: 0.06em
 				text-align: center
+				padding-top: 50px
 		&_text
-			padding-top: 40px
-			position: relative
-			display: flex
-			justify-content: center
-			align-items: center
-			&::before
-				content: ""
-				position: absolute
-				top: 3%
-				left: 50%
-				transform: translateX(-50%)
-				width: 17px
-				height: 17px
-				border-radius: 50%
-				border: 3px solid #2F07FF
-				z-index: 2
-				background: $accent
+			padding-top: 30px
 			span
 				font-size: 14px
 				font-family: $rob-regular
 				color: $text
 				letter-spacing: 0.06em
-				width: 150px
 				display: flex
 				justify-content: center
 				align-items: center
-				line-height: normal
-				height: 35px
+				line-height: 18px
+				min-height: 100%
+				height: 60px
+
 
 
 
