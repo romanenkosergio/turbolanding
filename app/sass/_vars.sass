@@ -1,57 +1,11 @@
-// Fonts
-$rob-regular: "roboto-regular" , sans-serif
-$rob-bold: "roboto-bold", sans-serif
-$hel-bold: "helvetica-bold", sans-serif
-$hel-medium: "helvetica-medium", sans-serif
-$hel-regular: "helvetica-regular", sans-serif
-$fa-font-path: "../libs/fontawesome/webfonts"
-
-//Colors
-$accent: white
-$text: #4A14C0
-$gradient: linear-gradient(#a69af5 0%, #7973ef 39%, #141be1 100%)
-$hover: linear-gradient(#a69af5 0%, #7973ef 61.5%, #141be1 100%)
-
-//tamplate
-%title
-	font-family: $hel-bold
-	font-size: 36px
-	color: $text
-	text-transform: uppercase
-	line-height: 43px
-	letter-spacing: 0.08em
-%subtitle
-	font-family: $hel-bold
-	font-size: 32px
-	color: $text
-	line-height: 38px
-	font-size: 32px
-	letter-spacing: 0.06em
-	text-align: center
-	color: #4a14c0
-
-%text
-	font-family: $rob-regular
-	font-size: 15px
-	color: $text
-	line-height: 21px
-%button
-	width: 270px
-	height: 72px
-	display: flex
-	align-items: center
-	justify-content: center
-	text-transform: uppercase
-	color: $accent
-	border-radius: 61px
-	background: linear-gradient(#a69af5 0%, #7973ef 39%, #141be1 100%)
-%hover
-	background: $hover
-	box-shadow: 5px 0px 99px rgba(0, 0, 0, 0.16)
-	color: $accent
-%transition
-	transition: ease 0.3s
-
+// Подключаем шрифты
+@import "fonts"
+// Подключаем цвета 
+@import "colors"
+// Подключаем Прочие стили
+@import "libs"
+// Подключаем Шаблоны Extend
+@import "tamplate"
 
 
 

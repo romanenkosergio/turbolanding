@@ -1,0 +1,143 @@
+.first-screen	
+	background: url('../img/first-screen/bg.jpg') no-repeat
+	background-size: cover
+	background-position-y: -3em
+	height: 100vh
+	// max-height: 955px
+	width: 100%
+.header
+	width: 100%
+	height: 58px
+	margin-top: 31px
+	display: flex	
+	justify-content: space-between
+	align-items: center
+	&__logo
+		width: 172px
+		height: 100%
+		img
+			width: 100%
+			height: 100%
+	&-menu
+		width: 650px
+		display: flex
+		justify-content: space-between
+		align-items: center
+		&_tablet
+			display: none
+		&__link
+			font-family: $Roboto-Regular
+			color: $white
+			letter-spacing: 1.44px
+			font-size: 18px
+			&:hover
+				color: $white
+	&__arrow
+		display: none
+.offer
+	margin-top: 50px
+	&__title
+		text-align: center
+		font-family: $Helvetica-Bold
+		font-size: 52px
+		letter-spacing: 3.64px
+		line-height: normal
+		color: $white
+		height: 100px
+	&__blocks
+		max-width: 970px
+		margin: 35px auto 0
+		display: flex
+		justify-content: space-between
+	&__block
+		width: 270px
+		height: 270px
+		background: $white
+		border-radius: 40px
+		+shadow
+		display: flex
+		flex-direction: column
+		align-items: center
+		justify-content: center
+		position: relative
+		&::after
+			content: "+"
+			color: rgba($white, .5)
+			font-family: $Helvetica-Bold
+			font-size: 68px
+			line-height: normal
+			position: absolute
+			right: -30%
+			top: 45%
+			transform: translate(-45%, -30%)
+		&:last-child::after
+			display: none
+	&__img
+		max-width: 130px
+		max-height: 130px
+		width: 100%
+		height: 100%
+		margin-bottom: 18px
+	&__text
+		font-family: $Helvetica-Medium
+		font-size: 20px
+		letter-spacing: 1.2px
+		line-height: normal	
+		text-align: center
+		display: block
+		color: $main-color
+.price-block
+	max-width: 582px	
+	margin: 24px auto 0
+	color: $white
+	text-align: center
+	&__title
+		text-transform: uppercase
+		font-family: $Helvetica-Medium
+		font-size: 22px
+		line-height: normal
+		letter-spacing: 1.32px
+	&__price
+		font-family: $Helvetica-Bold
+		font-size: 109px
+		line-height: normal
+		letter-spacing: 8.72px
+	&__item
+		max-width: 320px
+		margin: auto
+		text-align: left
+		display: flex
+		align-items: center
+		position: relative
+		&:before
+			content: ""
+			width: 12px
+			height: 12px
+			background: $white
+			border-radius: 50%
+			position: absolute
+			left: -20px
+	&__button
+		display: flex
+		justify-content: center
+		align-items: center
+		color: $white
+		font-family: $Helvetica-Roman
+		font-size: 26px
+		line-height: 35px
+		letter-spacing: 2.08px
+		text-transform: uppercase
+		width: 470px
+		height: 105px
+		border-radius: $brs
+		background: $main-gradient
+		box-shadow: 5px 0 99px rgba(0, 0, 0, 0.16)
+		margin-top: 15px
+		+transition
+		&:hover
+			+button-hover
+	&__text
+		display: block
+		color: $primary
+	&__phone
+		color: $primary

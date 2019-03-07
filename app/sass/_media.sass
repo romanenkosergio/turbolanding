@@ -16,16 +16,96 @@
 +media-breakpoint-down(xs)
 
 
+
 /*==========  Mobile First  ==========*/
 
 // ≤576px
 +media-breakpoint-up(sm)
 
+
 // ≤768px
 +media-breakpoint-up(md)
-
+	.first-screen
+		background: url("../img/first-screen/bg-tablet.jpg") no-repeat
+		height: 100%
+		background-size: auto
+		width: 100%
+	.header
+		display: flex
+		flex-direction: column
+		height: 100%
+		margin-top: 10px
+		&-menu
+			display: none
+			&__tablet
+				position: relative
+				display: flex
+				transform: translateY(-200px)
+				margin-bottom: 20px
+				+transition
+				&_active
+					transform: translateY(0)
+		&__arrow
+			display: block
+			width: 22px
+			height: 14px
+			position: relative
+			+transition
+			cursor: pointer
+			&_reverse
+				transform: rotate(180deg)
+				margin-bottom: 20px
+			&::after
+				content: ""
+				display: block
+				width: 3px
+				height: 11px
+				background: $white
+				position: absolute
+				right: 6px
+				transform: rotate(45deg)
+				+transition
+				bottom: 0
+			&::before
+				content: ""
+				display: block
+				width: 3px
+				height: 11px
+				background: $white
+				position: absolute
+				left: 6px
+				transform: rotate(-45deg)
+				+transition
+				bottom: 0
+	.offer
+		width: 100%
+		margin-top: 20px
+		&__title
+			font-size: 35px
+			width: 610px
+			margin: 30px auto 0
+			height: auto
+		&__blocks
+			max-width: 707px
+		&__block
+			width: 205px
+			height: 205px
+			&::after
+				font-size: 44px
+				width: 31px
+				height: 43px
+				right: -25%
+				top: 45%
+				transform: translate(-25%, -45%)
+		&__img
+			width: 90px
+			height: 90px
+	.price-block
+		&__title
 // ≤992px
 +media-breakpoint-up(lg)
 
 // ≤1200px
 +media-breakpoint-up(xl)
+	.first-screen
+		background: url('../img/first-screen/bg.jpg') no-repeat

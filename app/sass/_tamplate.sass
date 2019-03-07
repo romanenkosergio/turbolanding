@@ -1,0 +1,48 @@
+$brs: 61px
+@mixin transition
+	transition: .4s ease
+@mixin shadow
+	box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.16)
+@mixin title
+	font-family: $Helvetica-Bold
+	font-size: 34px
+	color: $text
+	text-transform: uppercase
+	line-height: 43px
+	letter-spacing: 2.04px
+@mixin subtitle
+	font-family: $Helvetica-Bold
+	font-size: 32px
+	color: $text
+	line-height: 38px
+	font-size: 32px
+	letter-spacing: 1.92px
+	text-align: center
+@mixin text
+	font-family: $Roboto-Regular
+	font-size: 18px
+	color: $text
+	line-height: 21px
+	letter-spacing: 1.08px
+@mixin button
+	width: 166px
+	height: 44px
+	display: flex
+	align-items: center
+	justify-content: center
+	text-transform: uppercase
+	color: $white
+	border-radius: $brs
+	box-shadow: 0 6px 20px rgba(0, 0, 0, 0.16)
+	background: $main-gradient
+@mixin button-hover
+	background: $main-gradient-hover
+	box-shadow: 5px 0px 99px rgba(0, 0, 0, 0.16)
+	color: $white
+a
+	text-decoration: none
+	&:hover
+		text-decoration: none
+p 
+	margin: 0
+	padding: 0
