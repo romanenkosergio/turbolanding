@@ -1,15 +1,14 @@
-.first-screen	
+.first-screen
 	background: url('../img/first-screen/bg.jpg') no-repeat
 	background-size: cover
 	background-position-y: -3em
 	height: 100vh
-	// max-height: 955px
 	width: 100%
 .header
 	width: 100%
 	height: 58px
 	margin-top: 31px
-	display: flex	
+	display: flex
 	justify-content: space-between
 	align-items: center
 	&__logo
@@ -44,6 +43,7 @@
 		line-height: normal
 		color: $white
 		height: 100px
+		margin-bottom: 0
 	&__blocks
 		max-width: 970px
 		margin: 35px auto 0
@@ -82,12 +82,12 @@
 		font-family: $Helvetica-Medium
 		font-size: 20px
 		letter-spacing: 1.2px
-		line-height: normal	
+		line-height: normal
 		text-align: center
 		display: block
 		color: $main-color
 .price-block
-	max-width: 582px	
+	max-width: 582px
 	margin: 24px auto 0
 	color: $white
 	text-align: center
@@ -97,6 +97,7 @@
 		font-size: 22px
 		line-height: normal
 		letter-spacing: 1.32px
+		margin-bottom: 10px
 	&__price
 		font-family: $Helvetica-Bold
 		font-size: 109px
@@ -109,6 +110,7 @@
 		display: flex
 		align-items: center
 		position: relative
+		font-size: 20px
 		&:before
 			content: ""
 			width: 12px
@@ -141,3 +143,142 @@
 		color: $primary
 	&__phone
 		color: $primary
+@media (max-width: 1440px)
+	.offer
+		margin-top: 20px
+		&__block
+			width: 260px
+			height: 260px
+			&::after
+				top: 45%
+				right: -30%
+				transform: translate(-30%, -45%)
+		&__img
+			max-width: 110px
+			max-height: 110px
+	.price-block
+		&__price
+			font-size: 99px
+			line-height: 100px
+			margin-bottom: 0
+		&__item
+			max-width: 280px
+@media (max-width: 1280px)
+	.first-screen
+		height: 100%
+	.offer
+		&__title
+			height: auto
+		&__block
+			height: 220px
+			width: 260px
+	.price-block
+		&__price
+			font-size: 80px
+			line-height: 77px
+		&__button
+			height: 90px
+			margin-top: 5px
+@media (max-width: 1024px)
+	.first-screen
+		background-position-y: center
+@media (max-width: 900px)
+	.first-screen
+		background: url("../img/first-screen/bg-tablet.jpg") no-repeat
+		height: 100%
+		background-size: cover
+		width: 100%
+		background-position-y: -12em
+	.header
+		flex-direction: column
+		height: 100%
+		margin-top: 15px
+		&-menu
+			display: none
+			&_tablet
+				position: relative
+				display: flex
+				transform: translateY(-200px)
+				+transition
+				&_active
+					transform: translateY(0)
+					margin-bottom: 20px
+		&__arrow
+			display: block
+			width: 22px
+			height: 14px
+			position: relative
+			+transition
+			cursor: pointer
+			&_reverse
+				transform: rotate(180deg)
+				margin-bottom: 20px
+			&::after
+				content: ""
+				display: block
+				width: 3px
+				height: 11px
+				background: $white
+				position: absolute
+				right: 6px
+				transform: rotate(45deg)
+				+transition
+				bottom: 0
+			&::before
+				content: ""
+				display: block
+				width: 3px
+				height: 11px
+				background: $white
+				position: absolute
+				left: 6px
+				transform: rotate(-45deg)
+				+transition
+				bottom: 0
+	.offer
+		width: 100%
+		&__title
+			font-size: 45px
+			line-height: 42px
+			height: auto
+		&__blocks
+			max-width: 707px
+			margin: 26px 15px 0
+		&__block
+			width: 205px
+			height: 205px
+			&::after
+				font-size: 44px
+				width: 31px
+				right: -25%
+				top: 45%
+				transform: translate(-45%,-25%)
+		&__img
+			width: 90px
+			height: 90px
+	.price-block
+		margin-top: 27px
+		&__price
+			font-size: 109px
+			line-height: normal
+		&__button
+			margin-top: 15px
+		&__title
+			font-size: 22px
+		&__price
+			font-size: 109px
+		&__item
+			max-width: 350px
+			font-size: 20px
+		&__button
+			width: 479px
+			height: 105px
+			font-size: 26px
+@media (max-width: 769px)
+	.first-screen
+		background-size: auto
+		background-position-y: -3em
+@media (max-width: 576px)
+	.first-screen
+		background: url("../img/first-screen/bg-mobile.jpg") no-repeat
+		background-size: cover

@@ -14,60 +14,60 @@
 
 // ≥576px
 +media-breakpoint-down(xs)
-
+	// .first-screen
+	// 	// background: linear-gradient(to bottom, #4f00bc, #29abe2)
+	// 	background: url("../img/first-screen/bg-mobile.jpg") no-repeat
+	// 	height: 100%
+	// 	background-size: cover
+	// 	width: 100%
+	// 	background-position-y: -3em
+	// .header
+	// 	margin-top: 30px
+	// 	display: flex
+	// 	justify-content: center
+	// 	&-menu
+	// 		display: none
+	// 		&__tablet
+	// 			display: none
+	// .offer
+	// 	&__title
+	// 		font-size: 32px
+	// 		line-height: normal
+	// 		letter-spacing: 2.24px
+	// 		height: auto
+	// 	&__blocks
+	// 		flex-wrap: wrap
+	// 		width: 100%
+	// 		margin: 20px auto 0
+	// 		align-items: center
+	// 		justify-content: center
+	// 	&__block
+	// 		margin-bottom: 30px
+	// 		&:last-child
+	// 			margin-bottom: 0
+	// 		&::after
+	// 			top: 100%
+	// 			right: 50%
+	// 			transform: translate(50%, -20%)
+	// 			font-size: 44px
+	// 			line-height: 53px
+	// .price-block
+	// 	margin-top: 20px
+	// 	&__price
+	// 		font-size: 97px
+	// 	&__item
+	// 		max-width: 230px
+	// 	&__button
+	// 		width: 302px
+	// 		height: 60px
+	// 		font-size: 16px
 
 
 /*==========  Mobile First  ==========*/
 
 // ≤0px
 +media-breakpoint-up(xs)
-	.first-screen
-		// background: linear-gradient(to bottom, #4f00bc, #29abe2)
-		background: url("../img/first-screen/bg-mobile.jpg") no-repeat
-		height: 100%
-		background-size: cover
-		width: 100%
-		background-position-y: -3em
-	.header
-		margin-top: 30px
-		display: flex
-		justify-content: center
-		&-menu
-			display: none
-			&__tablet
-				display: none
-	.offer
-		&__title
-			font-size: 32px
-			line-height: normal
-			letter-spacing: 2.24px
-			height: auto
-		&__blocks
-			flex-wrap: wrap
-			width: 100%
-			margin: 20px auto 0
-			align-items: center
-			justify-content: center
-		&__block
-			margin-bottom: 30px
-			&:last-child
-				margin-bottom: 0
-			&::after
-				top: 100%
-				right: 50%
-				transform: translate(50%, -20%)
-				font-size: 44px
-				line-height: 53px
-	.price-block
-		margin-top: 20px
-		&__price
-			font-size: 97px
-		&__item
-			max-width: 230px
-		&__button
-			width: 302px
-			height: 60px
-			font-size: 16px
+
 
 // ≤576px
 +media-breakpoint-up(sm)
@@ -76,94 +76,7 @@
 
 // ≤768px
 +media-breakpoint-up(md)
-	.first-screen
-		background: url("../img/first-screen/bg-tablet.jpg") no-repeat
-		height: 100%
-		background-size: auto
-		width: 100%
-		background-position-y: -3em
-	.header
-		flex-direction: column
-		height: 100%
-		margin-top: 15px
-		&-menu
-			&__tablet
-				position: relative
-				display: flex
-				transform: translateY(-200px)
-				+transition
-				&_active
-					transform: translateY(0)
-					margin-bottom: 20px
-		&__arrow
-			display: block
-			width: 22px
-			height: 14px
-			position: relative
-			+transition
-			cursor: pointer
-			&_reverse
-				transform: rotate(180deg)
-				margin-bottom: 20px
-			&::after
-				content: ""
-				display: block
-				width: 3px
-				height: 11px
-				background: $white
-				position: absolute
-				right: 6px
-				transform: rotate(45deg)
-				+transition
-				bottom: 0
-			&::before
-				content: ""
-				display: block
-				width: 3px
-				height: 11px
-				background: $white
-				position: absolute
-				left: 6px
-				transform: rotate(-45deg)
-				+transition
-				bottom: 0
-	.offer
-		width: 100%
-		margin-top: 20px
-		&__title
-			font-size: 45px
-			line-height: 42px
-		&__blocks
-			max-width: 707px
-			margin: 35px 15px 0
-			flex-wrap: nowrap
-			justify-content: space-between
-		&__block
-			width: 205px
-			height: 205px
-			margin-bottom: 0
-			&::after
-				font-size: 44px
-				width: 31px
-				height: 43px
-				right: -13%
-				top: 40%
-		&__img
-			width: 90px
-			height: 90px
-	.price-block
-		margin-top: 27px
-		&__title
-			font-size: 22px
-		&__price
-			font-size: 109px
-		&__item
-			max-width: 350px
-			font-size: 20px
-		&__button
-			width: 479px
-			height: 105px
-			font-size: 26px
+
 // ≤992px
 +media-breakpoint-up(lg)
 
